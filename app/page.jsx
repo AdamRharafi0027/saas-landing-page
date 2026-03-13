@@ -1,8 +1,11 @@
-import React from 'react'
+import Header from '@/components/sections/Header.jsx/Header'
+
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="min-h-screen bg-[#09090B]">
+      <Header />
+    </div>
   )
 }
 

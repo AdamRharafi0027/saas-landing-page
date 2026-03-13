@@ -1,0 +1,17 @@
+import Button from '@/components/ui/Button'
+import React from 'react'
+
+const HeaderCTA = () => {
+  return (
+    <>
+        <div className='flex justify-center items-center lg:gap-5 gap-2'>
+            <Button   classname={"text-gray-300 hover:text-white"} >Login</Button>
+            <Button text="Get Started" classname={"text-white bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 text-[12px] lg:text-[15px]"} >
+                Get Started
+            </Button>
+        </div>
+    </>
+  )
+}
+
+export default HeaderCTA
