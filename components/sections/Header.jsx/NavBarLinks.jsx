@@ -43,7 +43,7 @@ const NavBarLinks = () => {
 
 
         {mobileMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-[#09090B] flex flex-col items-center gap-5 py-6 lg:hidden">
+          <div className="fixed top-16 left-0 w-full bg-[#09090B]/80 flex flex-col items-center gap-5 py-6 lg:hidden">
             {links.map((link, index) => (
               <a
                 key={index}

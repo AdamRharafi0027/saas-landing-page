@@ -11,7 +11,7 @@ const Header = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex w-full h-20 border-white/10 border-b justify-between items-center px-2 lg:px-10"
+        className="fixed top-0 left-0 right-0 z-50 flex w-full h-20 backdrop-blur-lg bg-[#09090B]/80 border-b border-white/5 justify-between items-center px-2 lg:px-10 "
       >
         <Logo />
         <NavBarLinks />
