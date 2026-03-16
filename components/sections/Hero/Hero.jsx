@@ -13,12 +13,12 @@ const Hero = () => {
 
   return (
     <>
-      <section className="pt-20 flex  items-center justify-evenly h-screen w-full overflow-x-hidden ">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#7C3AED]/20 to-cyan-500/20 rounded-full blur-3xl" />
+      <section className="lg:pt-20 flex flex-col text-center lg:flex-row items-center justify-center lg:justify-evenly min-h-screen w-full overflow-x-hidden">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] lg:w-[800px] lg:h-[800px] bg-gradient-to-r from-[#7C3AED]/20 to-cyan-500/20 rounded-full blur-3xl" />
         {/* Left Side */}
-        <aside className=" text-white">
-          <div className="flex flex-col gap-10">
-            <h1 className="w-150 text-3xl lg:text-7xl font-bold flex flex-wrap gap-4">
+        <aside className=" text-white w-full max-w-lg  px-4 lg:px-0 -mt-20 lg:mt-0">
+          <div className="flex flex-col gap-8 lg:gap-10">
+            <h1 className=" text-3xl md:text-5xl lg:w-150 lg:text-7xl font-bold flex flex-wrap gap-2 lg:gap-4 justify-center lg:justify-start">
               {headingWords.map((word, wordIndex) => (
                 <span key={wordIndex} className="flex">
                   {word.split("").map((letter, letterIndex) => {
@@ -45,7 +45,7 @@ const Hero = () => {
                 </span>
               ))}
             </h1>
-            <p className="text-gray-400 w-130 flex flex-wrap gap-2">
+            <p className="text-gray-400 text-base md:text-lg flex flex-wrap gap-1 lg:gap-2 justify-center lg:justify-start">
               {paraWords.map((word, wordIndex) => (
                 <span key={wordIndex} className="flex">
                   {word.split("").map((letter, letterIndex) => {
@@ -74,41 +74,39 @@ const Hero = () => {
             </p>
           </div>
           {/* buttons */}
-          <div className="flex items-center mt-10 gap-5">
-            <motion.div 
-            
-            initial={{ opacity: 0, x: -500 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
-
+          <div className="flex items-center mt-10 gap-5 flex-col lg:flex-row">
+            <motion.div
+              initial={{ opacity: 0, x: -500 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-                <Button
-              classname={
-                "py-4  text-white bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 text-[12px] lg:text-[15px]"
-              }
-            >
-              Starting Writing Free
-              <span>
-                <ArrowRight />
-              </span>
-            </Button>
+              <Button
+                classname={
+                  "py-4  text-white bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 text-[15px] "
+                }
+              >
+                Starting Writing Free
+                <span>
+                  <ArrowRight />
+                </span>
+              </Button>
             </motion.div>
             <motion.div
-            initial={{ opacity: 0, x: 500 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
+              initial={{ opacity: 0, x: 500 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-                <Button
-              classname={
-                "px-8 py-4 rounded-xl bg-white/5 text-white font-semibold hover:bg-white/10 border border-white/10 hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              }
-            >
-              {" "}
-              <span>
-                <Play />
-              </span>{" "}
-              Watch Demo
-            </Button>
+              <Button
+                classname={
+                  "px-8 py-4 rounded-xl bg-white/5 text-white font-semibold hover:bg-white/10 border border-white/10 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                }
+              >
+                {" "}
+                <span>
+                  <Play />
+                </span>{" "}
+                Watch Demo
+              </Button>
             </motion.div>
           </div>
         </aside>
@@ -118,7 +116,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="relative hidden lg:flex"
           >
             <div className="relative">
               {/* Main card */}

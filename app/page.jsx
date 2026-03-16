@@ -4,7 +4,7 @@ import Hero from '@/components/sections/Hero/Hero'
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#09090B]">
+    <div className="w-full min-h-screen bg-[#09090B] overflow-x-hidden">
       <Header />
       <Hero />
     </div>
