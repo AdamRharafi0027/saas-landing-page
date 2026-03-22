@@ -1,10 +1,13 @@
 "use client"
 import { motion } from "motion/react";
-const SocialProof = () => {
-    const companies = ["Stripe", "Notion", "Vercel", "Linear", "Figma", "GitHub"]
+
+const SocialProof=()=> {
+  const companies = [
+    "Stripe", "Notion", "Vercel", "Linear", "Figma", "GitHub",
+  ];
+
   return (
-    <>
-        <section className="bg-[#09090B] py-16 border-y border-white/5 relative z-10 mt-20">
+    <section className="bg-[#09090B] py-16 border-y border-white/5">
       <div className="max-w-[1440px] mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,8 +37,6 @@ const SocialProof = () => {
         </motion.div>
       </div>
     </section>
-    </>
-  )
+  );
 }
-
 export default SocialProof

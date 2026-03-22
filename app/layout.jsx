@@ -1,6 +1,5 @@
-
+import { ClerkProvider, SignIn } from "@clerk/nextjs";
 import "./globals.css";
-
 
 export const metadata = {
   title: "Create Next App",
@@ -9,11 +8,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+        <ClerkProvider>
     <html lang="en">
-      <body
-      >
-        {children}
+      <body>
+          <div className="relative z-50">{children}</div>
       </body>
     </html>
+        </ClerkProvider>
   );
 }

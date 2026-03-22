@@ -3,4 +3,6 @@ body {
    width: 100% !important;
    overflow-x: hidden !important;
    position: relative !important;
+   background: #09090B !important;
+   scroll-behavior: smooth !important;
 }
